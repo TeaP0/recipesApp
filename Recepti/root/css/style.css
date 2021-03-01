@@ -1,0 +1,247 @@
+* {
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+  }
+
+  body {
+    background-color: #ffffff;
+    font-family: 'Montserrat', sans-serif;
+    height:100vh;
+  }
+
+  h1 {
+    font-size: 2vw;
+  }
+
+  p {
+    font-size: 2vh;
+  }
+
+  .container {
+    display: flex;
+    flex-direction: column;
+    min-height: 100%;
+    align-items: stretch;
+  }
+
+  .header {
+    background-image: url("../img/header.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    color:white;
+    width:100%;
+  }
+
+  nav {
+    width:100%;
+    display: flex;
+    justify-content: flex-end;
+  }
+
+  .menuLinks {
+    display:flex;
+  }
+  
+  #home{
+    flex-grow: 1; 
+  }
+
+  nav a {
+    color:white;
+    list-style-type: none;
+    font-size: 0.9rem;
+    font-weight: bold;
+    padding: 1rem;
+    margin: 0.5rem;  
+    text-decoration: none;
+  }
+
+  .search {
+    height: 50vh;
+    margin-top:10vh;
+    text-align: center;
+  }
+
+  .search h1 {
+    font-size: 3vw;
+    margin-left: 3vw;
+    word-wrap: break-word;
+  }
+
+.checkbox{
+  max-width: 30%;
+  display: flex;
+  margin:0.5rem;
+  align-items: center;
+}
+
+  form input{
+    width:35%;
+    margin:6vh 0vh 6vh 6vh;
+  }
+
+  form input:focus{
+    outline:none;
+  }
+
+  form input, form button{
+    font-size:1rem;
+    background-color: rgb(255, 255, 255);
+    padding:1.3rem;
+    border:none;
+  }
+
+  form button{
+    margin-left:0;
+    color:#313131; 
+    cursor:pointer;
+  }
+
+  form button:hover{
+    color:rgb(88, 88, 88);
+  }
+
+  a:hover {
+    text-decoration:underline;
+  }
+
+  .btn {
+    background-color:#8d8c62;
+    color:white;
+    cursor:pointer;
+    font-weight: bold;
+    letter-spacing: 1.5px;
+    border-radius: 1rem;
+    border:none;
+    padding:0.7rem;
+    margin:0.5rem;
+  }
+
+  .btn:hover{
+    text-decoration: underline;
+    transform: scale(1.1);
+  }
+
+  .btn:focus {
+    outline:none;
+    border:none;
+  }
+  
+  .menu {
+    display:hidden;
+  }
+
+  main{
+    flex-grow:1;
+  }
+
+  footer {
+    background-color: #ffffff;
+    border-top: 2px solid black;
+    width: 100%;
+    justify-content: center;
+    flex-grow: 0;
+    padding: 1.5rem;
+    text-align: center;
+  }
+
+  header, main, footer{
+  flex-shrink: 0;
+  }
+
+  @media screen and (max-width:500px) {
+    
+    .header {
+      max-height: 40vh;
+    }
+
+    h1 {
+      font-size: 4vw;
+    }
+
+    .search h1 {
+      font-size: 4vw;
+    }
+
+    .menu {
+      position: absolute;
+      left:0.5vmin;
+      top:2vmin;
+      cursor: pointer;
+    }
+
+    .btn {
+      display: none;
+    }
+
+    .menu div{
+      display:block;
+      width:30px;
+      height:4px;
+      background-color: #e9e9e9;
+      margin:5px;
+      left:0;
+    }
+  
+    .menuLinks {
+      position:absolute;
+      top:10vh;
+      left:0;
+      height:90vh;
+      background-color: #fffffff8;
+      display:flex;
+      flex-direction: column;
+      align-items:center;
+      width: 50%;
+      border:none;
+      transform: translateX(-100%);
+      transition: transform 0.4s ease-in;
+    }
+
+    form input{
+      width:50%;
+      margin:3vh 0 0 0;
+    }
+
+    .activeMenu {
+      transform: translateX(0%);
+    }
+  
+    nav a {
+      color:rgb(0, 0, 0);
+      margin:auto auto auto 1vw;
+      padding:auto;
+      text-align: left;
+      font-size: 2.5vh;
+    }
+
+    #home {
+      flex-grow: 0;
+    }
+
+    nav a:hover{
+      color:#808080;
+      text-decoration: underline;
+    }
+
+    body {
+        overflow-x: hidden;
+    }
+
+    main div{
+      flex-direction: column;
+    }
+
+    .checkbox {
+      min-width: 80%;
+      display:block;
+    }
+
+    .checkbox input {
+      max-width: 3vw;
+    }
+  }
+
+  
+  
